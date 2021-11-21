@@ -9,10 +9,10 @@ findAllEmployees (){
         "select employee.id, employee.first_name,employee.last_name,role.title,department.name as department,role.salary,concat(manager.first_name,' ',manager.last_name)as manager FROM employee LEFT JOIN role on employee.role_id =role.id LEFT JOIN department on role.department_id = department.id LEFT JOIN employee manager on manager.id = employee.manager_id;"
     )
 }
-findAllEmployeesByManager(manager_id){
+findAllEmployeesByManager(managerId){
 return this.connection.promise().query(
     "select employee.id ,employee.first_name,employee.last_name,role.title,department.name as department, role.title FROM employee LEFT JOIN role on role.id = employee.role_id LEFT JOIN department on department.id = role.department_id WHERE manager_id = ? ;",
-    manager_id
+    managerId
 )
 }
 findAllEmployeesByDepartment(departmentId){
@@ -79,7 +79,7 @@ updateEmployeeManager(employee_id,manager_id){
             department_id
         )
     }
-findAllBut(manager_id){
+findAllButManager(manager_id){
     return this.connection.promise().query(
         "select id , first_name, last_name FROM employee WHERE id !=?",
         manager_id
