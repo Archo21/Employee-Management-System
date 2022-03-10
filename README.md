@@ -5,3 +5,5 @@ An application allows non-developers to view and interact with information store
 This was built using Inquirer, MySQL, and Node.
 
 https://watch.screencastify.com/v/qSCVkxB3qPQvZPAY0EPP
+
+![](images/sql-demo-01.png)
