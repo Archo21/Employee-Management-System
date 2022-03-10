@@ -7,3 +7,4 @@ This was built using Inquirer, MySQL, and Node.
 https://watch.screencastify.com/v/qSCVkxB3qPQvZPAY0EPP
 
 ![](images/sql-demo-01.png)
+![](images/sql-video-thumbnail.png)
